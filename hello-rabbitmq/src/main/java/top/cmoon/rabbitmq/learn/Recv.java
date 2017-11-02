@@ -1,6 +1,7 @@
 package top.cmoon.rabbitmq.learn;
 
 import com.rabbitmq.client.*;
+import top.cmoon.rabbitmq.learn.util.ChannelUtil;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -12,12 +13,9 @@ public class Recv {
             throws java.io.IOException,
             java.lang.InterruptedException, TimeoutException {
 
-        ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
-        Connection connection = factory.newConnection();
-        Channel channel = connection.createChannel();
+        Channel channel = ChannelUtil.getChannel();
 
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(QUEUE_NAME, false, false, true, null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
         Consumer consumer = new DefaultConsumer(channel) {

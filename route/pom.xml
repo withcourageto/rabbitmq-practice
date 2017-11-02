@@ -5,12 +5,12 @@
         <groupId>top.cmoon.rabbitmq.learn</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>hello-rabbitmq</artifactId>
+
+    <artifactId>route</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-rabbitmq</name>
+    <name>route</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -23,12 +23,12 @@
             <artifactId>util</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.rabbitmq</groupId>
-            <artifactId>amqp-client</artifactId>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
         </dependency>
     </dependencies>
 </project>
