@@ -9,6 +9,7 @@
 
     <modules>
         <module>hello-rabbitmq</module>
+        <module>publish-subscribe</module>
     </modules>
 
     <name>rabbitmq-practice</name>
